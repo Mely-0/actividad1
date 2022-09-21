@@ -1,0 +1,89 @@
+body{
+    width: 100%;
+    height:100%;
+    margin: 0%;
+    padding: 0%;
+}
+.header {
+background-color: rgb(158, 226, 226);
+grid-area: header;
+}
+.menus{
+background-color: rgb(241, 132, 241);
+grid-area: menus;
+}
+.hero {
+background-color: rgb(188, 155, 219);
+grid-area: hero;
+}
+.main{
+background-color: dimgray;
+grid-area: main;
+}
+.banner {
+background-color: rgb(109, 198, 228);
+grid-area: banner;
+}
+.extra{
+background-color: rgb(235, 165, 202);
+grid-area: extra;
+}
+.imagen{
+background-color: rgb(160, 3, 87);
+grid-area: imagen;
+}
+
+.grid{
+height:100vh;
+width: 100vw;
+display: grid;
+grid-template-areas:
+"header"
+"menus"
+"hero"
+"hero"
+"hero"
+"main"
+"main"
+"main"
+"banner"
+"banner"
+"extra"
+"extra"
+"imagen"
+"imagen";
+grid-template-rows: 5% auto 5%;
+
+grid-template-areas:  
+"header header menu menu"
+"nav nav nav nav"
+" principal principal adside "
+" footer footer footer footer "
+; 
+} 
+@media (min-width: 800px) {
+    .grid{
+        grid-template-areas:
+        "header header header header"
+        "hero hero hero hero"
+        "hero hero hero hero"
+        "hero hero hero hero"
+        "menus main main main"
+        "menus main main main"
+        "menus banner banner banner"
+        "menus extra extra imagen";
+        }
+}
+@media (min-width: 1080px) {
+    .grid{
+        grid-template-areas:
+        "header menus menus menus"
+        "hero hero hero hero "
+        "hero hero hero hero "
+        "hero hero hero hero"
+        "main main . imagen"
+        "main main . extra"
+        "banner banner banner banner"
+        ;
+        }
+}
